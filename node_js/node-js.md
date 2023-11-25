@@ -35,3 +35,27 @@ Not for static content hosting.
 
 Application require=ing control over multi threading.
 
+### The App
+
+Usually Node JS app or any application for that mattern needs clearly written business logic, according to seperation of concerns for modularizing code, providing readability, troubleshooting and not creat a mess that nobody wants to touch.
+
+An programming requires us to be well strcutured and well written.
+
+Node JS app can be divided into three components inside of it.
+
+#### Controller
+- API Routes and end points. These access incoming request and routes to respective peice of code for executing business logic.
+
+#### Service Layer
+- This is the place to include any business logic. Create these classes based on one per business function - do not confuce with a creating a method / function. 
+
+- This layer interacts with Data Access Layer for fecthing, updating data in the downstream API or Database.
+
+
+### Data Access Layer
+
+- Can be a Database, Rabbit MQ for publishing events or an API calls.
+- This is the layer that will have most of the timespent and this is where non blocking IO does the magic with paraller processing.
+
+
+
